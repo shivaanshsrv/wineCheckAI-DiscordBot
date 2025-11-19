@@ -34,7 +34,6 @@ This AI system provides:
 - **Food recommendations for any wine**  
 - **Wine recommendations for any food**  
 - **Wine cluster analysis using ML**  
-- **Beautiful Discord slash commands**  
 - Full ML pipeline: cleaning → training → clustering → bot
 
 ---
@@ -44,11 +43,11 @@ This AI system provides:
 ```plaintext
 wine-food-ai/
 │
-├── 1_data_cleaning.py
-├── 2_food_recommender.py
-├── 3_wine_recommender.py
-├── 4_clustering_model.py
-├── 5_chatbot_assistant.py  # SLASH COMMAND VERSION
+├── data_cleaning.py
+├── food_recommender.py
+├── wine_recommender.py
+├── clustering_model.py
+├── chatbot_assistant.py  # SLASH COMMAND VERSION
 │
 ├── data/
 │   └── cleaned_wine_food.csv
