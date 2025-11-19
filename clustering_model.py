@@ -1,5 +1,3 @@
-# Performs KMeans clustering on combined wine text (wine + description).
-
 import os
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
