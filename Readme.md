@@ -91,35 +91,46 @@ All commands return a styled Embed with your ML model predictions.
 
 DISCORD_TOKEN=YOUR_TOKEN_HERE
 
-⬇️ Setup Guide
-1️⃣ Install Dependencies
-pip install -r requirements.txt
+<h2>⬇️ Setup Guide</h2>
 
-2️⃣ Run the ML Pipeline
-python 1_data_cleaning.py
+<h3>1️⃣ Install Dependencies</h3>
+
+<pre><code>pip install -r requirements.txt
+</code></pre>
+
+<h3>2️⃣ Run the ML Pipeline</h3>
+
+<pre><code>python 1_data_cleaning.py
 python 2_food_recommender.py
 python 3_wine_recommender.py
 python 4_clustering_model.py
+</code></pre>
 
-3️⃣ Run the Discord Bot
-python 5_chatbot_assistant.py
+<h3>3️⃣ Run the Discord Bot</h3>
 
-🔥 Screenshots Section (Optional)
+<pre><code>python 5_chatbot_assistant.py
+</code></pre>
+
+<hr/>
+
+<h2>🔥 Screenshots Section (Optional)</h2>
+
 <div align="center">
   <img src="https://via.placeholder.com/700x300?text=Your+Bot+Screenshot+Here" />
 </div>
 
+<p>Replace the image link with your actual screenshot.</p>
 
-Just replace the image link with your actual screenshot.
+<hr/>
 
-🧠 Future Features (Optional)
+<h2>🧠 Future Features (Optional)</h2>
 
-/recommend full-meal
+<ul>
+  <li>/recommend full-meal</li>
+  <li>Image-based wine recognition</li>
+  <li>Hybrid collaborative filtering</li>
+  <li>Web dashboard for admin</li>
+</ul>
 
-Image-based wine recognition
-
-Hybrid collaborative filtering
-
-Web dashboard for admin
 
 <div align="center"> <h2>⭐ Enjoy the Project!</h2> <p>If you found this useful, consider starring the repo 🌟</p> </div> 
