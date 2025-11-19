@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1>🍷 Wine & Food AI — Discord Bot</h1>
+<h1>🍷 Wine & Food AI | Discord Bot</h1>
 
 <p>
 A complete AI-powered wine & food pairing system built with  
@@ -71,10 +71,7 @@ wine-food-ai/
 /wine Butter Chicken
 /cluster Merlot
 
-
-All commands return a styled Embed with your ML model predictions.
-
-🌐 Discord Bot Token Setup (HTML Styled)
+🌐 Discord Bot Token Setup 
 <ol>
   <li>Go to <a href="https://discord.com/developers/applications">Discord Developers Portal</a></li>
   <li>Create a new Application → Add Bot</li>
