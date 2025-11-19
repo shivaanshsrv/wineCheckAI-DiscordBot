@@ -1,8 +1,5 @@
-# 4_clustering_model.py
-"""
-Performs KMeans clustering on combined wine text (wine + description).
-Saves cluster model and vectorizer and writes clusters.csv with assigned cluster.
-"""
+# Performs KMeans clustering on combined wine text (wine + description).
+
 import os
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer

@@ -1,15 +1,7 @@
-# 5_chatbot_assistant.py
-"""
-Discord bot with SLASH COMMANDS:
-/food <wine>
-/wine <food>
-/cluster <wine>
-
-Uses your existing models from:
-- 2_food_recommender.py
-- 3_wine_recommender.py
-- 4_clustering_model.py
-"""
+# SLASH COMMANDS:
+# /food <wine>
+# /wine <food>
+# /cluster <wine>"
 
 import os
 import discord
@@ -28,18 +20,15 @@ if not TOKEN:
 MODEL_DIR = "models"
 DATA_PATH = "data/cleaned_wine_food.csv"
 
-# Function to load Python scripts dynamically
 def load_module(path, name):
     spec = importlib.util.spec_from_file_location(name, path)
-    mod = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(mod)
+    mod = importlib.util.module_from_spec(spec) # type: ignore
+    spec.loader.exec_module(mod) # type: ignore
     return mod
 
-# Load recommenders
-food_mod = load_module("2_food_recommender.py", "food_reco")
-wine_mod = load_module("3_wine_recommender.py", "wine_reco")
+food_mod = load_module("food_recommender.py", "food_reco")
+wine_mod = load_module("wine_recommender.py", "wine_reco")
 
-# Load clustering model + vectorizer
 CLUSTER_MODEL = None
 CLUSTER_VECTOR = None
 CLUSTER_MODEL_PATH = os.path.join(MODEL_DIR, "kmeans_model.pkl")
@@ -51,14 +40,11 @@ if os.path.exists(CLUSTER_MODEL_PATH):
 if os.path.exists(CLUSTER_VECT_PATH):
     CLUSTER_VECTOR = joblib.load(CLUSTER_VECT_PATH)
 
-# Load dataset
 df = pd.read_csv(DATA_PATH)
 
 intents = discord.Intents.default()
 bot = commands.Bot(command_prefix="!", intents=intents)
 
-
-# -------------- SLASH COMMAND SETUP ---------------- #
 
 @bot.event
 async def on_ready():
@@ -70,9 +56,6 @@ async def on_ready():
     except Exception as e:
         print("Error syncing commands:", e)
 
-
-
-# ------------------- SLASH COMMANDS ------------------- #
 
 @bot.tree.command(name="food", description="Recommend foods for a given wine.")
 async def food(interaction: discord.Interaction, wine: str):
@@ -123,7 +106,7 @@ async def cluster(interaction: discord.Interaction, wine: str):
     vec = CLUSTER_VECTOR.transform([wine])
     label = CLUSTER_MODEL.predict(vec)[0]
 
-    # Wines in same cluster
+
     similar = df[df["cluster"] == label]["wine"].unique().tolist()[:10]
 
     embed = discord.Embed(
@@ -147,8 +130,5 @@ async def cluster(interaction: discord.Interaction, wine: str):
 
     await interaction.followup.send(embed=embed)
 
-
-
-# ------------------- RUN BOT ------------------- #
 
 bot.run(TOKEN)

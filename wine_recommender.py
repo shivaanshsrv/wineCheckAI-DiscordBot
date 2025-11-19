@@ -1,8 +1,3 @@
-# 3_wine_recommender.py
-"""
-Given a food/dish name, return top wine recommendations.
-Uses TF-IDF on 'food' text and cosine similarity.
-"""
 import os
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer

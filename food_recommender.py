@@ -1,8 +1,3 @@
-# 2_food_recommender.py
-"""
-Given a wine name, return top food recommendations.
-Uses TF-IDF on 'wine' + 'description' and cosine similarity.
-"""
 import os
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -36,7 +31,7 @@ def recommend_food(wine_name, top_n=5):
     X = vectorizer.transform(df['wine_text'])
     query_vec = vectorizer.transform([wine_name])
     sims = linear_kernel(query_vec, X).flatten()
-    top_idx = sims.argsort()[::-1][:top_n*3]  # take more to dedupe
+    top_idx = sims.argsort()[::-1][:top_n*3] 
     foods = []
     seen = set()
     for idx in top_idx:
@@ -52,5 +47,4 @@ if __name__ == "__main__":
     if not os.path.exists(VECT_PATH):
         print("Preparing model...")
         prepare()
-    # quick demo
     print(recommend_food("Pinot Noir", top_n=6))
