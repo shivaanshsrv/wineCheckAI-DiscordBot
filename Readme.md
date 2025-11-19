@@ -63,3 +63,62 @@ wine-food-ai/
 ├── .env
 ├── requirements.txt
 └── README.md
+
+<div align="center"> <h2>✨ Features</h2> </div> <div align="center"> <table> <tr> <td>🍽️ Recommend Food</td> <td>🍷 Recommend Wine</td> <td>📊 Wine Clustering</td> </tr> <tr> <td>✔ TF-IDF Similarity</td> <td>✔ KMeans Groups</td> <td>✔ Clean Dataset Pipeline</td> </tr> <tr> <td>⚡ Slash Commands</td> <td>🧠 Content-Based Filtering</td> <td>📦 Fully Modular Code</td> </tr> </table> </div>
+
+💬 Slash Commands
+/food Pinot Noir
+/wine Butter Chicken
+/cluster Merlot
+
+
+All commands return a styled Embed with your ML model predictions.
+
+🌐 Discord Bot Token Setup (HTML Styled)
+<ol>
+  <li>Go to <a href="https://discord.com/developers/applications">Discord Developers Portal</a></li>
+  <li>Create a new Application → Add Bot</li>
+  <li>Enable:
+    <ul>
+      <li>Server Members Intent</li>
+      <li>Message Content Intent (optional)</li>
+    </ul>
+  </li>
+  <li>Click <strong>Reset Token</strong> → Copy Token</li>
+  <li>Create a file named <code>.env</code> in project root with:</li>
+</ol>
+
+DISCORD_TOKEN=YOUR_TOKEN_HERE
+
+⬇️ Setup Guide
+1️⃣ Install Dependencies
+pip install -r requirements.txt
+
+2️⃣ Run the ML Pipeline
+python 1_data_cleaning.py
+python 2_food_recommender.py
+python 3_wine_recommender.py
+python 4_clustering_model.py
+
+3️⃣ Run the Discord Bot
+python 5_chatbot_assistant.py
+
+🔥 Screenshots Section (Optional)
+<div align="center">
+  <img src="https://via.placeholder.com/700x300?text=Your+Bot+Screenshot+Here" />
+</div>
+
+
+Just replace the image link with your actual screenshot.
+
+🧠 Future Features (Optional)
+
+/recommend full-meal
+
+Image-based wine recognition
+
+Hybrid collaborative filtering
+
+Web dashboard for admin
+
+<div align="center"> <h2>⭐ Enjoy the Project!</h2> <p>If you found this useful, consider starring the repo 🌟</p> </div> ```
