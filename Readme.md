@@ -63,6 +63,7 @@ wine-food-ai/
 ├── .env
 ├── requirements.txt
 └── README.md
+```
 
 <div align="center"> <h2>✨ Features</h2> </div> <div align="center"> <table> <tr> <td>🍽️ Recommend Food</td> <td>🍷 Recommend Wine</td> <td>📊 Wine Clustering</td> </tr> <tr> <td>✔ TF-IDF Similarity</td> <td>✔ KMeans Groups</td> <td>✔ Clean Dataset Pipeline</td> </tr> <tr> <td>⚡ Slash Commands</td> <td>🧠 Content-Based Filtering</td> <td>📦 Fully Modular Code</td> </tr> </table> </div>
 
@@ -121,4 +122,4 @@ Hybrid collaborative filtering
 
 Web dashboard for admin
 
-<div align="center"> <h2>⭐ Enjoy the Project!</h2> <p>If you found this useful, consider starring the repo 🌟</p> </div> ```
+<div align="center"> <h2>⭐ Enjoy the Project!</h2> <p>If you found this useful, consider starring the repo 🌟</p> </div> 
