@@ -100,37 +100,16 @@ DISCORD_TOKEN=YOUR_TOKEN_HERE
 
 <h3>2️⃣ Run the ML Pipeline</h3>
 
-<pre><code>python 1_data_cleaning.py
-python 2_food_recommender.py
-python 3_wine_recommender.py
-python 4_clustering_model.py
+<pre><code>python data_cleaning.py
+python food_recommender.py
+python wine_recommender.py
+python clustering_model.py
 </code></pre>
 
 <h3>3️⃣ Run the Discord Bot</h3>
 
-<pre><code>python 5_chatbot_assistant.py
+<pre><code>python chatbot_assistant.py
 </code></pre>
-
-<hr/>
-
-<h2>🔥 Screenshots Section (Optional)</h2>
-
-<div align="center">
-  <img src="https://via.placeholder.com/700x300?text=Your+Bot+Screenshot+Here" />
-</div>
-
-<p>Replace the image link with your actual screenshot.</p>
-
-<hr/>
-
-<h2>🧠 Future Features (Optional)</h2>
-
-<ul>
-  <li>/recommend full-meal</li>
-  <li>Image-based wine recognition</li>
-  <li>Hybrid collaborative filtering</li>
-  <li>Web dashboard for admin</li>
-</ul>
 
 
 <div align="center"> <h2>⭐ Enjoy the Project!</h2> <p>If you found this useful, consider starring the repo 🌟</p> </div> 
